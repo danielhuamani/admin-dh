@@ -30,6 +30,8 @@
   },
   "dependencies": {
     "jade": "^1.11.0",
-    "plumber": "^0.4.8"
+    "nib": "^1.1.0",
+    "plumber": "^0.4.8",
+    "supervisor": "^0.9.1"
   }
 }
