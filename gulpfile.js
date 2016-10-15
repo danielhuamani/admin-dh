@@ -9,8 +9,10 @@ var nib = require('nib');
 var historyApiFallback = require('connect-history-api-fallback');
 var directorio = {
 
-  jade: ['app/templates/jade/*.jade'],
-  stylus: ['app/static/stylus/*.styl']
+  jade: 'app/templates/jade/*.jade',
+  stylus: 'app/static/stylus/*.styl',
+  stylus_blocks: 'app/static/stylus/**/*.styl',
+
 
 };
 
@@ -26,7 +28,15 @@ gulp.task('stylus', function () {
     .pipe(connect.reload());
 
 });
-
+gulp.task('stylus_blocks', () => {
+  return gulp.src(directorio.stylus_blocks)
+    .pipe(plumber())
+    .pipe(stylus({
+      use: nib()
+    }))
+    .pipe(gulp.dest('app/static/css/'))
+    .pipe(connect.reload())
+});
 
 gulp.task('templates', function() {
 
@@ -45,6 +55,7 @@ gulp.task('watch', function() {
 
 	gulp.watch('app/static/stylus/*.styl', ['stylus']),
 	gulp.watch('app/templates/jade/*.jade', ['templates'])
+  gulp.watch(directorio.stylus_blocks, ['stylus_blocks'])
 });
 
 //creacioon  del server para el livereload
