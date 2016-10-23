@@ -1,0 +1,24 @@
+/*Clases principales*/
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+figure {
+  margin: 0;
+}
+figure img {
+  display: block;
+}
+img.thumbnail-circle {
+  border-radius: 50%;
+}

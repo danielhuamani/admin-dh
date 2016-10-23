@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Document
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto:300,400,700,900" rel="stylesheet">
+		link(rel="stylesheet", href="../../static/css/main.css")
+		block css
+	body
+		.wrapper
+			include ./sidebar.jade
+			.container-main
+				include ./header.jade
+				#page.container-all
+					block content
+				include ./footer.jade
+		script(src="../../static/js/main.js")
+		block js
+

@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  overflow: hidden;
+}
+.wrapper .container-main {
+  position: relative;
+  margin-left: 250px;
+  background: color_background;
+  padding-bottom: 33px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.wrapper #page {
+  box-sizing: border-box;
+  padding: 0px 15px;
+}

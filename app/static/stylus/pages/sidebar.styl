@@ -1,0 +1,105 @@
+@import "../themes/default.styl"
+
+.aside-main
+    position absolute
+    width 250px
+    height 100%
+    background color_sidebar
+
+    .cnt-logo-admin
+        height 60px
+        display flex
+        align-items center
+        justify-content center
+        background color_sidebar
+        .titulo
+            text-align center
+            /*padding 10px 10px*/
+            h2
+                color color_white
+                font-weight 400
+
+    .cnt-usuario
+        padding 10px 10px
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        background lighten(color_sidebar, 10%)
+        figure
+            border-radius 50%
+            width 50px
+            display inline-block
+            vertical-align top
+            margin 0px
+
+            img
+                border-radius 50%
+                display block
+                width 100%
+                height auto
+        .usuario
+            padding 5px 5px
+            display inline-block
+            width 160px
+            vertical-align top
+            h4.usuario-nombre
+                color color_white
+                /*font-family roboto*/
+                font-weight 400
+
+            p.usuario-cargo
+
+                /*font-family roboto*/
+                color color_white
+                margin 0px
+                margin-top 5px
+                font-weight 400
+
+    .cnt-menu
+        background color_sidebar
+        .menu-navegacion
+            h5
+                color color_main
+        ul.ul-menu-main
+            padding 0
+            span
+                color c-blanco
+                /*font-family roboto*/
+                font-size 13px
+                font-weight 400
+                .icon-arrow-menu
+                    font-size 10px
+                    float right
+                    margin-top 4px
+            >li
+                cursor pointer
+                list-style-type none
+                >a:hover, >a.active
+                    background lighten(color_sidebar, 10%)
+                    border-left color_main 4px solid
+                    color color_main
+                >a
+                    color color_white
+                    /*background red*/
+                    transition 0.2s ease all
+                    border-left solid 4px transparent
+                    padding 10px 20px 10px 20px
+                    display block
+
+            ul.menu-secund-active
+                height auto !important
+            ul.menu-secund
+                background lighten(color_sidebar, 10%)
+                li
+                    cursor pointer
+                    a
+                        background c-nav
+                        display block
+                        color color_white
+                        transition 0.2s ease all
+                        padding 10px 10px 10px 20px
+                        span
+                            font-size 13px
+                        &:hover
+                            color color_main

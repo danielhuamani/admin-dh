@@ -2,14 +2,14 @@
 .container-all
     max-width 100%
     margin auto
-    background-color: colors.panel
+
 
 .container
     margin auto
     max-width: device.movil
     padding-left 20px
     padding-right 20px
-    background-color: colors.panel
+
 
 .row
     flex-wrap wrap
@@ -17,7 +17,11 @@
     for num in (1..20)
         .col-movil-{num*5}
             width num*5%
-            background-color: colors.primary
+            padding 5px 8px
+            box-sizing border-box
+
+            .content
+                box-sizing border-box
 
 .row--end
     justify-content flex-end
@@ -36,9 +40,12 @@ for key, value in device
         @media (min-width : value)
             .container
                 max-width value
-                background-color: colors.default
             .row
                 for num in (1..20)
                     .col-{key}-{num*5}
                         width num*5%
-                        margin 0px 15px
+                        padding 5px 8px
+                        box-sizing border-box
+                        .content
+                            box-sizing border-box
+

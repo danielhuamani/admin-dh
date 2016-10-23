@@ -1,0 +1,120 @@
+.aside-main {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  background: #232732;
+}
+.aside-main .cnt-logo-admin {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #232732;
+}
+.aside-main .cnt-logo-admin .titulo {
+  text-align: center;
+/*padding 10px 10px*/
+}
+.aside-main .cnt-logo-admin .titulo h2 {
+  color: #fff;
+  font-weight: 400;
+}
+.aside-main .cnt-usuario {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353b4b;
+}
+.aside-main .cnt-usuario figure {
+  border-radius: 50%;
+  width: 50px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px;
+}
+.aside-main .cnt-usuario figure img {
+  border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.aside-main .cnt-usuario .usuario {
+  padding: 5px 5px;
+  display: inline-block;
+  width: 160px;
+  vertical-align: top;
+}
+.aside-main .cnt-usuario .usuario h4.usuario-nombre {
+  color: #fff;
+/*font-family roboto*/
+  font-weight: 400;
+}
+.aside-main .cnt-usuario .usuario p.usuario-cargo {
+/*font-family roboto*/
+  color: #fff;
+  margin: 0px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.aside-main .cnt-menu {
+  background: #232732;
+}
+.aside-main .cnt-menu .menu-navegacion h5 {
+  color: #faa800;
+}
+.aside-main .cnt-menu ul.ul-menu-main {
+  padding: 0;
+}
+.aside-main .cnt-menu ul.ul-menu-main span {
+  color: c-blanco;
+/*font-family roboto*/
+  font-size: 13px;
+  font-weight: 400;
+}
+.aside-main .cnt-menu ul.ul-menu-main span .icon-arrow-menu {
+  font-size: 10px;
+  float: right;
+  margin-top: 4px;
+}
+.aside-main .cnt-menu ul.ul-menu-main >li {
+  cursor: pointer;
+  list-style-type: none;
+}
+.aside-main .cnt-menu ul.ul-menu-main >li >a:hover,
+.aside-main .cnt-menu ul.ul-menu-main >li >a.active {
+  background: #353b4b;
+  border-left: #faa800 4px solid;
+  color: #faa800;
+}
+.aside-main .cnt-menu ul.ul-menu-main >li >a {
+  color: #fff;
+/*background red*/
+  transition: 0.2s ease all;
+  border-left: solid 4px transparent;
+  padding: 10px 20px 10px 20px;
+  display: block;
+}
+.aside-main .cnt-menu ul.ul-menu-main ul.menu-secund-active {
+  height: auto !important;
+}
+.aside-main .cnt-menu ul.ul-menu-main ul.menu-secund {
+  background: #353b4b;
+}
+.aside-main .cnt-menu ul.ul-menu-main ul.menu-secund li {
+  cursor: pointer;
+}
+.aside-main .cnt-menu ul.ul-menu-main ul.menu-secund li a {
+  background: c-nav;
+  display: block;
+  color: #fff;
+  transition: 0.2s ease all;
+  padding: 10px 10px 10px 20px;
+}
+.aside-main .cnt-menu ul.ul-menu-main ul.menu-secund li a span {
+  font-size: 13px;
+}
+.aside-main .cnt-menu ul.ul-menu-main ul.menu-secund li a:hover {
+  color: #faa800;
+}

@@ -10,6 +10,7 @@ var historyApiFallback = require('connect-history-api-fallback');
 var directorio = {
 
   jade: 'app/templates/jade/*.jade',
+  jade_blocks: 'app/templates/jade/**/*.jade',
   stylus: 'app/static/stylus/*.styl',
   stylus_blocks: 'app/static/stylus/**/*.styl',
 
@@ -50,12 +51,24 @@ gulp.task('templates', function() {
 
 
 });
+gulp.task('templates_blocks', function() {
 
+  return gulp.src(directorio.jade_blocks)
+    .pipe(plumber())
+    .pipe(jade({
+      pretty: true
+      }))
+    .pipe(gulp.dest('app/templates/html'))
+    .pipe(connect.reload());
+
+
+});
 gulp.task('watch', function() {
 
 	gulp.watch('app/static/stylus/*.styl', ['stylus']),
 	gulp.watch('app/templates/jade/*.jade', ['templates'])
   gulp.watch(directorio.stylus_blocks, ['stylus_blocks'])
+  gulp.watch(directorio.jade_blocks, ['templates_blocks'])
 });
 
 //creacioon  del server para el livereload
@@ -72,5 +85,5 @@ gulp.task('connect', function() {
     }
   });
 });
-gulp.task('default', ['stylus', 'templates', 'watch', 'connect']);
+gulp.task('default', ['stylus', 'templates', 'templates_blocks', 'stylus_blocks','watch', 'connect']);
 //creacioon  del server para el livereload
